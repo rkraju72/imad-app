@@ -14,7 +14,7 @@ var config = {
 
 var app = express();
 app.use(morgan('combined'));
-
+/*
 var pool = new Pool(config);
 app.get('/test-db', function (Req,res) {
    pool.query('SELECT * FROM test', function(err, result){
@@ -25,7 +25,7 @@ app.get('/test-db', function (Req,res) {
        }
    }); 
 });
-
+*/
 function hash(input, salt){
     var hashed = crypto.pbkdf2Sync(input, salt, 10000, 512,'sha512');
     return hashed.toString('hex');
