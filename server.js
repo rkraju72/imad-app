@@ -27,11 +27,7 @@ app.get('/test-db', function (Req,res) {
 });
 */
 
-app.get('\create-user', function(req, res) {
-var username = req.body.username;
-var password = req.body.password;
-var salt = crypto.getRandomBytes(128).toString('hex');
-});
+
 
 app.get('/create-user', function (req,res) {
    var username = req.body.username;
