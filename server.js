@@ -26,6 +26,13 @@ app.get('/test-db', function (Req,res) {
    }); 
 });
 */
+
+app.get('/create-user', function (req,res) {
+   var username = req.body.username;
+   var password = req.body.password;
+   var salt = crypto.getRandomBytes(128).toString('hex');
+   
+});
 function hash(input, salt){
     var hashed = crypto.pbkdf2Sync(input, salt, 10000, 512,'sha512');
     return hashed.toString('hex');
