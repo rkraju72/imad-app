@@ -40,7 +40,7 @@ app.get('/create-user', function (req,res) {
        }else {
            res.send('User successfully created :' + ussername);
        }
-   }
+   });
 });
 function hash(input, salt){
     var hashed = crypto.pbkdf2Sync(input, salt, 10000, 512,'sha512');
