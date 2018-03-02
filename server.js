@@ -29,7 +29,7 @@ app.get('/test-db', function (Req,res) {
 
 
 
-app.get('/create-user', function (req,res) {
+app.post('/create-user', function (req,res) {
    var username = req.body.username;
    var password = req.body.password;
    var salt = crypto.randomBytes(128).toString('hex');
