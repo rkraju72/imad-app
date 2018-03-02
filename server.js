@@ -61,7 +61,7 @@ var salt=dbString.split('$')[2];
 var hashedPassword = hash(password, salt);
 if(hashedPassword === dbString) {
 res.send('credentials correct!');
-{ else {
+} else {
    res.send(403).send('username/password is invalid');
 }
 }
