@@ -18,7 +18,7 @@ app.use(morgan('combined'));
 app.use(bodyParser.json());
 
 var pool = new Pool(config);
-
+/*
 app.get('/test-db', function (Req,res) {
    pool.query('SELECT * FROM test', function(err, result){
        if(err) {
@@ -28,7 +28,7 @@ app.get('/test-db', function (Req,res) {
        }
    }); 
 });
-
+*/
 
 
 
